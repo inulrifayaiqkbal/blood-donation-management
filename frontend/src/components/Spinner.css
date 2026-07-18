@@ -1,0 +1,85 @@
+/* ============================================================
+   Spinner / Loading Styles
+   ============================================================ */
+
+.spinner-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+/* Full-page overlay */
+.spinner-fullpage {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+
+/* Spinner container */
+.blood-spinner {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+/* Rotating ring */
+.spinner-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid #f5c6c6;
+  border-top-color: #c0392b;
+  animation: spin 0.85s linear infinite;
+}
+
+/* Centre blood drop icon */
+.spinner-drop {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner-drop .fas {
+  font-size: 1.4rem;
+  color: #c0392b;
+  animation: pulse-drop 0.85s ease-in-out infinite alternate;
+}
+
+/* Message text */
+.spinner-message {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #c0392b;
+  margin: 0;
+}
+
+/* Size variants */
+.spinner-sm .blood-spinner { width: 36px; height: 36px; }
+.spinner-sm .spinner-drop .fas { font-size: 0.9rem; }
+.spinner-sm .spinner-message { font-size: 0.78rem; }
+
+.spinner-lg .blood-spinner { width: 90px; height: 90px; }
+.spinner-lg .spinner-ring { border-width: 4px; }
+.spinner-lg .spinner-drop .fas { font-size: 2.2rem; }
+.spinner-lg .spinner-message { font-size: 1rem; }
+
+/* Animations */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-drop {
+  from { transform: scale(0.9); opacity: 0.75; }
+  to   { transform: scale(1.1); opacity: 1; }
+}

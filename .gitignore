@@ -1,0 +1,51 @@
+# ── Python / Django ──
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Django secrets & local config
+backend/.env
+backend/db.sqlite3
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Migration cache (keep migration files, ignore pycache)
+backend/**/migrations/__pycache__/
+
+# ── Node / React ──
+frontend/node_modules/
+frontend/build/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── OS files ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE / Editor ──
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

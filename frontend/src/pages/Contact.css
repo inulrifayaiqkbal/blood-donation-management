@@ -1,0 +1,434 @@
+/* ============================================================
+   Contact Page Styles
+   ============================================================ */
+
+.contact-page {
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.contact-container {
+  padding: 3rem 1rem 4rem;
+}
+
+/* ── Info cards row ── */
+.contact-info-cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 0.4s ease;
+}
+
+.contact-info-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.5rem 1.2rem;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+  flex: 1;
+  min-width: 180px;
+  transition: all 0.3s ease;
+  border-top: 3px solid #c0392b;
+}
+
+.contact-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 28px rgba(192, 57, 43, 0.15);
+}
+
+.contact-info-icon {
+  width: 58px;
+  height: 58px;
+  background: linear-gradient(135deg, #8b0000, #c0392b);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
+}
+
+.contact-info-icon .fas {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.contact-info-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 0.35rem;
+}
+
+.contact-info-value {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contact-info-sub {
+  font-size: 0.78rem;
+  color: #aaa;
+  margin-top: 0.2rem;
+  display: block;
+}
+
+/* ── Main two-column layout ── */
+.contact-main-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* ── Contact form card ── */
+.contact-form-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  flex: 1 1 55%;
+  min-width: 280px;
+  animation: fadeInUp 0.45s ease;
+}
+
+.contact-form-header {
+  background: linear-gradient(135deg, #8b0000, #c0392b);
+  padding: 1.4rem 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+}
+
+.contact-form-header-icon {
+  width: 46px;
+  height: 46px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-form-header-icon .fas {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.contact-form-header h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.contact-form-header p {
+  font-size: 0.82rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.contact-form-body {
+  padding: 2rem;
+}
+
+/* Form controls */
+.contact-form-body .form-control {
+  background: #fafafa;
+  border: 1.5px solid #e8e8e8;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.contact-form-body .form-control:focus {
+  background: #fff;
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.12);
+}
+
+.contact-form-body .form-control.is-invalid {
+  border-color: #c0392b;
+  background-image: none;
+}
+
+.contact-form-body .form-control.is-valid {
+  border-color: #27ae60;
+  background-image: none;
+}
+
+.invalid-feedback {
+  font-size: 0.78rem;
+  color: #c0392b;
+}
+
+/* Character counter */
+.char-counter {
+  font-size: 0.75rem;
+  color: #bbb;
+}
+
+.char-counter.near-limit {
+  color: #f39c12;
+}
+
+/* Submit button */
+.btn-contact-submit {
+  background: linear-gradient(135deg, #8b0000, #c0392b);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-contact-submit:hover:not(:disabled) {
+  background: linear-gradient(135deg, #6b0000, #a93226);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 0, 0, 0.35);
+  color: #fff;
+}
+
+.btn-contact-submit:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Right sidebar column ── */
+.contact-sidebar {
+  flex: 1 1 30%;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: sticky;
+  top: 90px;
+}
+
+/* Sidebar cards */
+.contact-side-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+  animation: fadeInUp 0.5s ease;
+}
+
+.contact-side-card-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.contact-side-card-title .fas {
+  color: #c0392b;
+}
+
+/* Office hours list */
+.hours-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.84rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px dashed #f5f5f5;
+  color: #555;
+}
+
+.hours-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.hours-list .day {
+  font-weight: 600;
+  color: #333;
+}
+
+.hours-list .time {
+  color: #c0392b;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.hours-badge-closed {
+  background: #fde8e8;
+  color: #c0392b;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
+  border-radius: 10px;
+}
+
+/* Social links */
+.contact-social-grid {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.contact-social-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  flex: 1;
+  min-width: 110px;
+  justify-content: center;
+}
+
+.contact-social-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.social-fb    { background: #1877f2; color: #fff; }
+.social-tw    { background: #1da1f2; color: #fff; }
+.social-wa    { background: #25d366; color: #fff; }
+.social-ig    { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; }
+
+/* FAQ accordion */
+.faq-item {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0.75rem 0;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.faq-question:hover {
+  color: #c0392b;
+}
+
+.faq-question .fas {
+  font-size: 0.75rem;
+  color: #c0392b;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.faq-question.open .fas {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  font-size: 0.82rem;
+  color: #777;
+  line-height: 1.6;
+  padding-bottom: 0.75rem;
+  animation: fadeIn 0.2s ease;
+}
+
+/* ── Map placeholder ── */
+.map-placeholder {
+  background: linear-gradient(135deg, #fde8e8, #fff5f5);
+  border: 2px dashed rgba(192, 57, 43, 0.25);
+  border-radius: 12px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  margin-top: 2.5rem;
+  animation: fadeInUp 0.6s ease;
+}
+
+.map-placeholder .fas {
+  font-size: 2.5rem;
+  color: #c0392b;
+  opacity: 0.5;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.map-placeholder h6 {
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+.map-placeholder p {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0;
+}
+
+/* ── Success state ── */
+.contact-success-state {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.contact-success-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  box-shadow: 0 6px 20px rgba(39, 174, 96, 0.35);
+}
+
+.contact-success-icon .fas {
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 767.98px) {
+  .contact-form-body    { padding: 1.5rem; }
+  .contact-container    { padding: 2rem 1rem 3rem; }
+  .contact-sidebar      { position: static; }
+  .contact-info-card    { min-width: 140px; }
+}
+
+@media (max-width: 575.98px) {
+  .contact-info-cards   { flex-direction: column; }
+  .contact-main-row     { flex-direction: column; }
+}

@@ -1,0 +1,314 @@
+/* ============================================================
+   Blood Request Page Styles
+   ============================================================ */
+
+.blood-request-page {
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.blood-request-container {
+  padding: 3rem 1rem 4rem;
+}
+
+/* ── Form card ── */
+.request-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 35px rgba(0, 0, 0, 0.09);
+  overflow: hidden;
+  animation: fadeInUp 0.5s ease;
+}
+
+.request-card-header {
+  background: linear-gradient(135deg, #8b0000, #c0392b);
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+}
+
+.request-header-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.request-header-icon .fas {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.request-card-body {
+  padding: 2rem;
+}
+
+/* ── Form controls ── */
+.request-card-body .form-control,
+.request-card-body .form-select {
+  background: #fafafa;
+  border: 1.5px solid #e8e8e8;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.request-card-body .form-control:focus,
+.request-card-body .form-select:focus {
+  background: #fff;
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.12);
+}
+
+.request-card-body .form-control.is-invalid,
+.request-card-body .form-select.is-invalid {
+  border-color: #c0392b;
+  background-image: none;
+}
+
+.request-card-body .form-control.is-valid,
+.request-card-body .form-select.is-valid {
+  border-color: #27ae60;
+  background-image: none;
+}
+
+.invalid-feedback {
+  font-size: 0.78rem;
+  color: #c0392b;
+}
+
+/* ── Urgency notice ── */
+.urgency-notice {
+  background: linear-gradient(135deg, #fff5f5, #fde8e8);
+  border: 1px solid rgba(192, 57, 43, 0.25);
+  border-left: 4px solid #c0392b;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.urgency-notice .fas {
+  color: #c0392b;
+  font-size: 1.1rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.urgency-notice-text {
+  font-size: 0.86rem;
+  color: #7b1818;
+  line-height: 1.6;
+}
+
+.urgency-notice-text strong {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 0.92rem;
+}
+
+/* ── Submit button ── */
+.btn-submit-request {
+  background: linear-gradient(135deg, #8b0000, #c0392b);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.85rem;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.btn-submit-request:hover:not(:disabled) {
+  background: linear-gradient(135deg, #6b0000, #a93226);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 0, 0, 0.35);
+  color: #fff;
+}
+
+.btn-submit-request:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Sidebar ── */
+.request-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: sticky;
+  top: 90px;
+}
+
+.request-sidebar-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.4rem;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+  animation: fadeInUp 0.6s ease;
+}
+
+.sidebar-card-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Emergency contacts */
+.emergency-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px dashed #f0f0f0;
+}
+
+.emergency-contact-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.emergency-icon {
+  width: 38px;
+  height: 38px;
+  background: #fde8e8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.emergency-icon .fas {
+  font-size: 0.9rem;
+  color: #c0392b;
+}
+
+.emergency-label {
+  font-size: 0.75rem;
+  color: #aaa;
+  display: block;
+  margin-bottom: 0.1rem;
+}
+
+.emergency-value {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #222;
+  display: block;
+}
+
+/* Steps list */
+.steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step-counter;
+}
+
+.steps-list li {
+  counter-increment: step-counter;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  font-size: 0.84rem;
+  color: #555;
+  padding: 0.4rem 0;
+  position: relative;
+}
+
+.step-num {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #8b0000, #c0392b);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Blood group compact grid */
+.bg-compact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.bg-compact-pill {
+  background: #fde8e8;
+  color: #c0392b;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(192, 57, 43, 0.25);
+}
+
+/* ── Success confirmation panel ── */
+.request-success-panel {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 35px rgba(0, 0, 0, 0.09);
+  padding: 3rem 2rem;
+  text-align: center;
+  animation: fadeInUp 0.5s ease;
+}
+
+.success-icon-circle {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 6px 20px rgba(39, 174, 96, 0.35);
+}
+
+.success-icon-circle .fas {
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+.success-ref {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  display: inline-block;
+  font-size: 0.88rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.success-ref strong {
+  color: #c0392b;
+}
+
+/* ── Responsive ── */
+@media (max-width: 767.98px) {
+  .request-card-body  { padding: 1.5rem; }
+  .blood-request-container { padding: 2rem 1rem 3rem; }
+}

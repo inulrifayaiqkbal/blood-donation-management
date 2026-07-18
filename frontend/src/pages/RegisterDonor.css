@@ -1,0 +1,232 @@
+/* ============================================================
+   Register Donor Page Styles
+   ============================================================ */
+
+.register-donor-page {
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* ── Page header icon ── */
+.page-header-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  display: block;
+  opacity: 0.9;
+}
+
+/* ── Container spacing ── */
+.register-container {
+  padding: 3rem 1rem 4rem;
+}
+
+/* ── Form card ── */
+.register-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 35px rgba(0, 0, 0, 0.09);
+  overflow: hidden;
+  animation: fadeInUp 0.5s ease;
+}
+
+/* Card header strip */
+.register-card-header {
+  background: linear-gradient(135deg, #8b0000, #c0392b);
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+}
+
+.register-header-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.register-header-icon .fas {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+/* Card body */
+.register-card-body {
+  padding: 2rem;
+}
+
+/* ── Form controls overrides ── */
+.register-card-body .form-control,
+.register-card-body .form-select {
+  background: #fafafa;
+  border: 1.5px solid #e8e8e8;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.register-card-body .form-control:focus,
+.register-card-body .form-select:focus {
+  background: #fff;
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.12);
+}
+
+.register-card-body .form-control.is-valid,
+.register-card-body .form-select.is-valid {
+  border-color: #27ae60;
+  background-image: none;
+}
+
+.register-card-body .form-control.is-invalid,
+.register-card-body .form-select.is-invalid {
+  border-color: #c0392b;
+  background-image: none;
+}
+
+.invalid-feedback {
+  font-size: 0.78rem;
+  color: #c0392b;
+  margin-top: 0.3rem;
+}
+
+/* ── Eligibility note ── */
+.eligibility-note {
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-left: 4px solid #f39c12;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.84rem;
+  color: #6d4c00;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.eligibility-note .fas {
+  color: #f39c12;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* ── Submit button ── */
+.btn-submit-register {
+  background: linear-gradient(135deg, #8b0000, #c0392b);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.85rem;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-submit-register:hover:not(:disabled) {
+  background: linear-gradient(135deg, #6b0000, #a93226);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 0, 0, 0.35);
+  color: #fff;
+}
+
+.btn-submit-register:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+/* ── Sidebar ── */
+.register-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-top: 0;
+  position: sticky;
+  top: 90px;
+}
+
+.sidebar-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.4rem;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+  border-top: 3px solid #c0392b;
+  animation: fadeInUp 0.6s ease;
+}
+
+.sidebar-heading {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Why donate list */
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-list li {
+  font-size: 0.84rem;
+  color: #555;
+  padding: 0.3rem 0;
+}
+
+/* Blood group grid */
+.sidebar-bg-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.sidebar-bg-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #8b0000, #c0392b);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(139, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.sidebar-bg-badge:hover {
+  transform: scale(1.1);
+}
+
+/* Contact card */
+.sidebar-contact p {
+  line-height: 1.8;
+}
+
+/* ── Form bottom links ── */
+.form-bottom-links {
+  padding-top: 0.5rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 767.98px) {
+  .register-card-body  { padding: 1.5rem; }
+  .register-container  { padding: 2rem 1rem 3rem; }
+}
