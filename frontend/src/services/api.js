@@ -25,7 +25,10 @@ import axios from 'axios';
 // Axios instance — base URL points to Django backend via CRA proxy
 // ---------------------------------------------------------------------------
 const api = axios.create({
-  baseURL: '/api',
+  baseURL:
+    process.env.NODE_ENV === 'production'
+      ? 'https://blood-donation-management-h96u.onrender.com/api'
+      : '/api',
   headers: {
     'Content-Type': 'application/json',
   },
