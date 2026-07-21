@@ -4,6 +4,7 @@ Django settings for Blood Bank Management System
 
 from pathlib import Path
 from decouple import config
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -66,15 +67,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'bloodbank.wsgi.application'
 
 # Database - PostgreSQL
+# Database
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # works with both psycopg2 and psycopg3
-        'NAME': config('DB_NAME', default='bloodbank_db'),
-        'USER': config('DB_USER', default='postgres'),
-        'PASSWORD': config('DB_PASSWORD', default='password'),
-        'HOST': config('DB_HOST', default='localhost'),
-        'PORT': config('DB_PORT', default='5432'),
-    }
+    "default": dj_database_url.config(
+        default=config("DATABASE_URL")
+    )
 }
 
 # Password validation
