@@ -50,9 +50,8 @@ ROOT_URLCONF = 'bloodbank.urls'
 
 TEMPLATES = [
     {
-        'DIRS': [BASE_DIR / 'templates'],
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'bloodbank' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
